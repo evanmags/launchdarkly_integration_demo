@@ -1,0 +1,15 @@
+# feature flag requirements
+tklauthtools @ git+ssh://git@github.com/tackle-io/tackle-auth-tools@main
+PyYAML # optional for yaml support
+
+# app requirements
+cats
+cryptography
+fastapi
+uvicorn
+python-dotenv
+aws-secretsmanager-caching
+PyJWT
+
+# test requirements
+pytest

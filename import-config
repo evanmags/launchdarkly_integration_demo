@@ -1,0 +1,2 @@
+terraform import launchdarkly_feature_flag.awesome_feature default/ab-vendor-awesome-new-feature
+terraform import launchdarkly_feature_flag_environment.awesome_feature_dev_env default/dev/ab-vendor-awesome-new-feature

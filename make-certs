@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# https://github.com/FiloSottile/mkcert
+mkcert localhost
+mv localhost.pem certs/localhost.pem
+mv localhost-key.pem certs/localhost-key.pem
