@@ -455,10 +455,10 @@
     colors "~1.2.1"
     string-argv "~0.3.1"
 
-"@tackle-io/tackle-auth-tools@^0.0.5":
-  version "0.0.5"
-  resolved "https://npm.pkg.github.com/download/@tackle-io/tackle-auth-tools/0.0.5/d2b132d98dbbd029cb60e6e85df306816aa65f36#d2b132d98dbbd029cb60e6e85df306816aa65f36"
-  integrity sha512-ntLrvtwpSjivOMm6u6kuVk5q/yJdpD7Tqloeu63CzJ2b11ykNrBXPNO3vWPlom3S+BGZ90Cr4roe/P4FZBMlPw==
+"@tackle-io/tackle-auth-tools@^0.0.8":
+  version "0.0.8"
+  resolved "https://npm.pkg.github.com/download/@tackle-io/tackle-auth-tools/0.0.8/688be01d9f75f2962b52c55548e96f10777118d7#688be01d9f75f2962b52c55548e96f10777118d7"
+  integrity sha512-QWV03q41bSzw6PHttb64KOwKcSesr8cd21x1H0j9XuLjMw+0ADoJHyMNZsE8cqSBSJzRDUbXUGJ85ip64GHO7Q==
   dependencies:
     "@aws-crypto/sha256-browser" "^2.0.2"
     launchdarkly-react-client-sdk "^2.27.0"

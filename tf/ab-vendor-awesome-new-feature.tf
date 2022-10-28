@@ -39,11 +39,10 @@ resource "launchdarkly_feature_flag_environment" "awesome_feature_dev_env" {
   flag_id = launchdarkly_feature_flag.awesome_feature.id
   env_key = module.tkl_ld_tf.environment_dev
 
-  on      = true
-  archive = true
+  on = true
 
   rules {
-    variation = 1
+    variation = 2
     clauses {
       attribute = "type"
       op        = "in"

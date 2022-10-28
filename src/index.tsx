@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom'
 
 import ReactPlayer from 'react-player/lazy'
 
-import { FeatureFlagServiceProvider, useFeatureFlagService, TackleAuthServiceProvider } from '@tackle-io/tackle-auth-tools'
+import {
+    FeatureFlagServiceProvider,
+    useFeatureFlagService,
+    TackleAuthServiceProvider,
+} from '@tackle-io/tackle-auth-tools'
+
 import { useAwesomeService } from './AwesomeService'
 
-const FEATURE_FLAG_AWESOME_FEATURE = "ab-vendor-awesome-new-feature"
-type FlagMap = {
-    [FEATURE_FLAG_AWESOME_FEATURE]: 'default' | 'version1' | 'version2'
-}
+import { FEATURE_FLAG_AWESOME_FEATURE, FlagMap, localFlags } from './flags'
 
 const FlaggedDisplayComponent = () => {
     const asvc = useAwesomeService(import.meta.env.VITE_AWESOME_SERVICE_URL)
@@ -20,7 +22,7 @@ const FlaggedDisplayComponent = () => {
 
     const [displayData, setDisplayData] = useState<string>();
     useEffect(() => { asvc.getData().then(setDisplayData) }, [flagValue])
-
+    console.log(flagValue)
     switch (flagValue) {
         case 'version1':
             return <pre>{displayData}</pre>
@@ -44,6 +46,7 @@ const App = () =>
             <FeatureFlagServiceProvider
                 authToken={import.meta.env.VITE_AUTH_TOKEN}
                 clientSideID={import.meta.env.VITE_LD_CLIENT_SIDE_ID}
+                flagOverrides={import.meta.env.DEV ? localFlags : {}}
                 App={FlaggedDisplayComponent}
                 Loader={LoadingMessage}
             />

@@ -3,10 +3,10 @@
   "scripts": {
     "build": "vite build",
     "view:dev": "vite build --watch",
-    "serve:dev": "uvicorn app.app:app --host localhost --reload --ssl-keyfile ./certs/localhost-key.pem --ssl-certfile ./certs/localhost.pem"
+    "serve:dev": "uvicorn app.app:app --host localhost --reload"
   },
   "dependencies": {
-    "@tackle-io/tackle-auth-tools": "^0.0.5",
+    "@tackle-io/tackle-auth-tools": "^0.0.8",
     "@types/lodash.camelcase": "^4.3.7",
     "@types/node": "^18.8.2",
     "@types/react": "^18.0.21",
